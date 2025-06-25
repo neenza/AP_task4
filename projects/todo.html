@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic To-Do List App</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="grid"></div>
+    </div>
+    
+    <header>
+        <div class="logo">
+            <span>TODO</span><span class="highlight">LIST</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Back to Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="todo-main">
+        <div class="container">
+            <div class="todo-wrapper">
+                <h1 class="glitch" data-text="TASK MATRIX">TASK MATRIX</h1>
+                <p class="subtitle">Organize your digital future</p>
+                
+                <div class="todo-controls">
+                    <div class="input-wrapper">
+                        <input type="text" id="taskInput" placeholder="Enter a new task...">
+                        <button id="addTask" class="btn btn-primary">Add Task</button>
+                    </div>
+                    
+                    <div class="filter-wrapper">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="active">Active</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                        <button id="clearCompleted" class="btn btn-secondary btn-clear">Clear Completed</button>
+                    </div>
+                </div>
+                
+                <div class="todo-list-container">
+                    <ul id="taskList" class="todo-list">
+                        <!-- Tasks will be added here dynamically -->
+                    </ul>
+                    
+                    <div class="empty-state" id="emptyState">
+                        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f680.svg" alt="Rocket" class="empty-icon">
+                        <p>Your task list is empty. Add some tasks to get started!</p>
+                    </div>
+                </div>
+                
+                <div class="statistics">
+                    <div class="stat">
+                        <h3>Total</h3>
+                        <p id="totalTasks">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Active</h3>
+                        <p id="activeTasks">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Completed</h3>
+                        <p id="completedTasks">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Futuristic To-Do List. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="todo.js"></script>
+</body>
+</html>
